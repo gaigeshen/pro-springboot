@@ -3,10 +3,10 @@ package work.gaigeshen.pro.springboot.comment.service;
 import org.springframework.stereotype.Service;
 import work.gaigeshen.pro.springboot.comment.dto.CommentDto;
 import work.gaigeshen.pro.springboot.comment.dto.CommentResultDto;
-import work.gaigeshen.pro.springboot.validation.api.ValidationService;
-import work.gaigeshen.pro.springboot.validation.api.dto.Result;
-import work.gaigeshen.pro.springboot.validation.api.dto.ValidationDto;
-import work.gaigeshen.pro.springboot.validation.api.dto.ValidationResultDto;
+import work.gaigeshen.pro.springboot.comment.service.remote.ValidationService;
+import work.gaigeshen.pro.springboot.commons.dto.ValidationDto;
+import work.gaigeshen.pro.springboot.commons.dto.ValidationResultDto;
+import work.gaigeshen.pro.springboot.commons.web.Result;
 
 /**
  *

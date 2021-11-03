@@ -2,12 +2,13 @@ package work.gaigeshen.pro.springboot.validation.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import work.gaigeshen.pro.springboot.validation.api.dto.Result;
-import work.gaigeshen.pro.springboot.validation.api.dto.ValidationDto;
-import work.gaigeshen.pro.springboot.validation.api.ValidationService;
-import work.gaigeshen.pro.springboot.validation.api.dto.ValidationResultDto;
+import work.gaigeshen.pro.springboot.commons.dto.ValidationDto;
+import work.gaigeshen.pro.springboot.commons.dto.ValidationResultDto;
+import work.gaigeshen.pro.springboot.commons.web.Result;
 
 /**
  *
@@ -15,12 +16,12 @@ import work.gaigeshen.pro.springboot.validation.api.dto.ValidationResultDto;
  */
 @RequestMapping("/validations")
 @RestController
-public class ValidationController implements ValidationService {
+public class ValidationController {
 
   private static final Logger log = LoggerFactory.getLogger(ValidationController.class);
 
-  @Override
-  public Result<ValidationResultDto> createValidation(ValidationDto validation) {
+  @PostMapping
+  public Result<ValidationResultDto> createValidation(@RequestBody ValidationDto validation) {
 
     log.info("creating validation with content: {}", validation.getContent());
 

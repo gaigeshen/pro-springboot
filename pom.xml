@@ -10,7 +10,7 @@
     <modules>
         <module>pro-springboot-comment</module>
         <module>pro-springboot-validation</module>
-        <module>pro-springboot-validation-api</module>
+        <module>pro-springboot-commons</module>
     </modules>
     <packaging>pom</packaging>
 

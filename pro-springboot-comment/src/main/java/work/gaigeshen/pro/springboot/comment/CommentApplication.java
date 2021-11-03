@@ -3,7 +3,7 @@ package work.gaigeshen.pro.springboot.comment;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import work.gaigeshen.pro.springboot.validation.api.ValidationService;
+import work.gaigeshen.pro.springboot.comment.service.remote.ValidationService;
 
 /**
  *

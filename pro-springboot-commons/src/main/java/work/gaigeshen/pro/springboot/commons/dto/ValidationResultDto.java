@@ -1,4 +1,4 @@
-package work.gaigeshen.pro.springboot.validation.api.dto;
+package work.gaigeshen.pro.springboot.commons.dto;
 
 /**
  *

@@ -29,9 +29,10 @@
 
         <dependency>
             <groupId>work.gaigeshen.pro</groupId>
-            <artifactId>pro-springboot-validation-api</artifactId>
+            <artifactId>pro-springboot-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>

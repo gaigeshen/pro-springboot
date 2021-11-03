@@ -1,4 +1,4 @@
-package work.gaigeshen.pro.springboot.comment.controller;
+package work.gaigeshen.pro.springboot.commons.web;
 
 /**
  *
