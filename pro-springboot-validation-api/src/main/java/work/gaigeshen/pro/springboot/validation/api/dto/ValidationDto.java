@@ -1,4 +1,4 @@
-package work.gaigeshen.pro.springboot.validation.controller;
+package work.gaigeshen.pro.springboot.validation.api.dto;
 
 /**
  *

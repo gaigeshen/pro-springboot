@@ -1,16 +1,18 @@
-package work.gaigeshen.pro.springboot.comment.controller;
+package work.gaigeshen.pro.springboot.comment.dto;
 
 /**
  *
  * @author gaigeshen
  */
-public class CommentDto {
+public class CommentResultDto {
 
   private Long userId;
 
   private Long articleId;
 
   private String content;
+
+  private String resultContent;
 
   public Long getUserId() {
     return userId;
@@ -34,5 +36,13 @@ public class CommentDto {
 
   public void setContent(String content) {
     this.content = content;
+  }
+
+  public String getResultContent() {
+    return resultContent;
+  }
+
+  public void setResultContent(String resultContent) {
+    this.resultContent = resultContent;
   }
 }
