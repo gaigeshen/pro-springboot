@@ -22,6 +22,7 @@ public class DefaultValidationService implements ValidationService {
     log.info("creating validation with content by default validation service: {}", validation.getContent());
 
     ValidationResultDto resultDto = new ValidationResultDto();
+    resultDto.setId(-1L);
     resultDto.setContent(validation.getContent());
     resultDto.setResultContent(validation.getContent() + " [fallback]");
 

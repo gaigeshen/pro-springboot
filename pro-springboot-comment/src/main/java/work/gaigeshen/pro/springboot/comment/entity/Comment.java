@@ -1,4 +1,4 @@
-package work.gaigeshen.pro.springboot.comment.dto;
+package work.gaigeshen.pro.springboot.comment.entity;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import java.util.Date;
  *
  * @author gaigeshen
  */
-public class CommentResultDto {
+public class Comment {
 
   private Long id;
 
@@ -15,6 +15,8 @@ public class CommentResultDto {
   private Long articleId;
 
   private String content;
+
+  private Long validationId;
 
   private Date createTime;
 
@@ -48,6 +50,14 @@ public class CommentResultDto {
 
   public void setContent(String content) {
     this.content = content;
+  }
+
+  public Long getValidationId() {
+    return validationId;
+  }
+
+  public void setValidationId(Long validationId) {
+    this.validationId = validationId;
   }
 
   public Date getCreateTime() {

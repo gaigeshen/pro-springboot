@@ -1,16 +1,20 @@
-package work.gaigeshen.pro.springboot.commons.dto;
+package work.gaigeshen.pro.springboot.validation.entity;
+
+import java.util.Date;
 
 /**
  *
  * @author gaigeshen
  */
-public class ValidationResultDto {
+public class Validation {
 
   private Long id;
 
   private String content;
 
   private String resultContent;
+
+  private Date createTime;
 
   public Long getId() {
     return id;
@@ -34,5 +38,13 @@ public class ValidationResultDto {
 
   public void setResultContent(String resultContent) {
     this.resultContent = resultContent;
+  }
+
+  public Date getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(Date createTime) {
+    this.createTime = createTime;
   }
 }

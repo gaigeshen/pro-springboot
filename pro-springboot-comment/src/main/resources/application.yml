@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: pro-springboot-comment
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/comment?useSSL=false
+    username: root
+    password: 123456
   cloud:
     nacos:
       discovery:
@@ -10,12 +14,24 @@ spring:
         register-enabled: false
         watch:
           enabled: false
-    sentinel:
-      transport:
-        dashboard: 127.0.0.1:9000
-feign:
-  sentinel:
-    enabled: true
+#    sentinel:
+#      transport:
+#        dashboard: 127.0.0.1:9000
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+  client:
+    undo:
+      log-table: seata_undo
+#feign:
+#  sentinel:
+#    enabled: true
 management:
   endpoints:
     web:
