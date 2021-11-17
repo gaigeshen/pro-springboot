@@ -7,6 +7,8 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import work.gaigeshen.pro.springboot.validation.entity.Validation;
 
+import java.util.Objects;
+
 /**
  *
  * @author gaigeshen
@@ -30,9 +32,11 @@ public class ValidationRepositoryImpl implements ValidationRepository {
     parameters.addValue("resultContent", validation.getResultContent());
     parameters.addValue("createTime", validation.getCreateTime());
 
-    jdbcTemplate.update("insert into validation (content, result_content, create_time) values (:content, :resultContent, :createTime)",
-            parameters, keyHolder);
+    jdbcTemplate.update("insert into validation (content, result_content, create_time) values (:content, :resultContent, :createTime)", parameters, keyHolder);
 
-    validation.setId(keyHolder.getKeyAs(Long.class));
+    Number key = keyHolder.getKey();
+    if (Objects.nonNull(key)) {
+      validation.setId(key.longValue());
+    }
   }
 }

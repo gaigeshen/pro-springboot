@@ -7,6 +7,8 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import work.gaigeshen.pro.springboot.comment.entity.Comment;
 
+import java.util.Objects;
+
 /**
  *
  * @author gaigeshen
@@ -32,9 +34,11 @@ public class CommentRepositoryImpl implements CommentRepository {
     parameters.addValue("validationId", comment.getValidationId());
     parameters.addValue("createTime", comment.getCreateTime());
 
-    jdbcTemplate.update("insert into comment (user_id, article_id, content, validation_id, create_time) values (:userId, :articleId, :content, :validationId, :createTime)",
-            parameters, keyHolder);
+    jdbcTemplate.update("insert into comment (user_id, article_id, content, validation_id, create_time) values (:userId, :articleId, :content, :validationId, :createTime)", parameters, keyHolder);
 
-    comment.setId(keyHolder.getKeyAs(Long.class));
+    Number key = keyHolder.getKey();
+    if (Objects.nonNull(key)) {
+      comment.setId(key.longValue());
+    }
   }
 }

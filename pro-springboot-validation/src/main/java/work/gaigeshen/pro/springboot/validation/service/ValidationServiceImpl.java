@@ -1,6 +1,5 @@
 package work.gaigeshen.pro.springboot.validation.service;
 
-import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 import work.gaigeshen.pro.springboot.commons.dto.ValidationDto;
 import work.gaigeshen.pro.springboot.commons.dto.ValidationResultDto;
@@ -22,7 +21,6 @@ public class ValidationServiceImpl implements ValidationService {
     this.validationRepository = validationRepository;
   }
 
-  @GlobalTransactional
   @Override
   public ValidationResultDto createValidation(ValidationDto validation) {
 
