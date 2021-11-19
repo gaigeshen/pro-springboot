@@ -47,7 +47,7 @@ public class CommentServiceImpl implements CommentService {
     newComment.setCreateTime(new Date());
     commentRepository.createComment(newComment);
 
-    int a = 1 / 0;
+    // int a = 1 / 0;
 
     CommentResultDto resultDto = new CommentResultDto();
     resultDto.setId(newComment.getId());
